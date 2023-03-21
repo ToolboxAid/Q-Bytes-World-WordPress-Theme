@@ -144,3 +144,21 @@ article.page h2 {
 	font-size: 225%;
 	margin-bottom: 15px;
 }
+
+/* Info Box */
+div.info-box
+{
+	width:30%;
+	float: right;
+	margin: 0 0 40px 40px;
+	padding: 20px;
+	background-color: #ECECEC;
+}
+div.info-box h4
+{
+margin-bottom: 2px;
+}
+div.info-box p
+{
+font-size: 75%;
+}
