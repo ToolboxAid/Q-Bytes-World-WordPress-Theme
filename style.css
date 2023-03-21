@@ -111,21 +111,20 @@ article.post:last-of-type {
 	background-color: #ECECEC;
 }
 
-.site-header nav ul li.current-menu-item a:link,
-.site-header nav ul li.current-menu-item a:visited {
+.site-header nav ul li.current_page_item,
+.site-header nav ul li.current_page_item a:visited {
 	font-weight: bold;
 	background-color: #b62912;
 	color: #FFF;
 }
 
-/* Footer */
+/* Footer Nav Menu */
 .site-footer {
 	margin-top: 30px;
 	border-top: 2px solid #b62912;
 	font-size: 84%;
 }
 
-/* Footer Nav Menu */
 .site-footer nav {
 	margin: 30px 0 10px 0;
 }
