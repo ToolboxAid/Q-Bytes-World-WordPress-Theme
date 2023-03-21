@@ -1,3 +1,5 @@
+
+<p>'page-no-title.php'</p>
 <?php
 /* Page is used for No Title pages 
 (selected from Page edit as template) 

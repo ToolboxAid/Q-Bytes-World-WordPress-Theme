@@ -1,5 +1,5 @@
 
-
+<p>'page-quite-kewl.php'</p>
 <?php
 /* Page is used for posts of type page */
 get_header();

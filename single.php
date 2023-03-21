@@ -1,4 +1,5 @@
-<p>'index.php'</p>
+
+<p>'single.php'</p>
 <?php
 
 get_header();
@@ -27,17 +28,8 @@ if (have_posts()) :
 		 ?>
 		</p>
 
-		<?php if ($post->post_excerpt) { ?>			
-			<p>
-			<?php echo get_the_excerpt(); ?>
-			<a href="<?php the_permalink(); ?>">Read more&raquo;</a>
-			</p>
-			
-		<?php } else {			
-			the_content("Continue reading");			
-		} ?>
-
-
+		<?php the_content(); ?>
+		
 	</article>
 	
 	<?php endwhile;

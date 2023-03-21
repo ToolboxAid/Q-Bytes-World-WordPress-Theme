@@ -1,5 +1,5 @@
 
-
+<p>'page.php'</p>
 <?php
 /* Page is used for posts of type page */
 get_header();

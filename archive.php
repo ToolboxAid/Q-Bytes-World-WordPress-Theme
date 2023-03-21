@@ -1,3 +1,4 @@
+<p>'archive.php'</p>
 <?php
 
 get_header();
@@ -67,7 +68,11 @@ else
 		 ?>
 		</p>
 
-		<?php the_excerpt(); ?>
+		<p>
+		<?php echo get_the_excerpt(); ?>
+		<a href="<?php the_permalink() ?>">Read more &raquo;</a>		
+		</p>
+
 	</article>
 	
 	<?php endwhile;
