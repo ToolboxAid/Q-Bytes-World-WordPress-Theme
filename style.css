@@ -42,10 +42,12 @@ div.container {
 }
 
 /* Content Area */
-article.post {
-	border-bottom: 2px dashed #b62912;
-}
 
+article.post {
+	margin-top: 25px;
+	padding-bottom: 25px;
+	border-bottom: 2px dashed #b6291240;
+}
 article.post:last-of-type {
 	border-bottom: none;
 }
