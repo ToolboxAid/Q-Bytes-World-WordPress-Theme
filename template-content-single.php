@@ -1,14 +1,5 @@
-
-<p>'single.php'</p>
-<?php
-
-get_header();
-
-if (have_posts()) :
-    /* the loop */
-	while (have_posts()) : the_post(); ?>
-	
-	<article class="post">
+'template-content-single.php'
+<article class="post">
 		<h2><?php the_title(); ?></h2>
 		<p class="post-info"><?php the_time('F jS, Y @ g:i A'); ?>
 		by <a href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>"><?php the_author(); ?>.</a>
@@ -34,12 +25,3 @@ if (have_posts()) :
 		<?php the_content(); ?>
 		
 	</article>
-	
-	<?php endwhile;
-	else :
-		echo '<p>Sorry, no content found  :(</p>';	
-	endif;
-	
-get_footer();
-
-?>

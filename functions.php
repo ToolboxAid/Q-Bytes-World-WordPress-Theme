@@ -54,6 +54,9 @@ function qbytesworld_setup()
 	add_image_size('small-thumbnail', 180, 120, true);// true forces aspect ratio
 	add_image_size('banner-image', 920, 210, true);	
 //	add_image_size('banner-image', 920, 210, 'left', 'top'); crop location
+
+	// Add post type support
+	add_theme_support('post-formats', array('aside', 'gallery', 'link'));
 }
 add_action('after_setup_theme', 'qbytesworld_setup');
 

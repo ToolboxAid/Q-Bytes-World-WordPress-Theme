@@ -51,6 +51,76 @@ article.post:last-of-type {
 	border-bottom: none;
 }
 
+/* Aside Styles */
+article.post-aside,
+article.post-link {
+	font-size: 125%;
+	background-color: #FFF5CB;
+	padding: 20px 20px 1px 20px;
+	border-bottom: none;
+	border-radius: 5px;
+	box-shadow: 5px 5px 5px rgba(255, 0, 0, .3);
+}
+
+.mini-meta {
+	font-size: 68%;
+	margin: 0;
+	color: #777;
+	display: block;
+}
+
+.mini-meta a {
+	color: #777;
+	text-decoration: none;
+}
+
+/* Link Post Format Styles */
+article.post-link {
+	background-color: #E0EBFF;
+	padding: 0;
+}
+
+article.post-link a {
+	display: block;
+	text-decoration: none;
+	padding: 20px;
+}
+
+.post-link-text {
+	line-height: 1.65em;
+	color: #004982;
+}
+
+/* Gallery Post Format Styles */
+article.post-gallery {
+	background-color: #222;
+	color: #FFF;
+	padding: 20px;
+	border-bottom: none;
+}
+
+article.post-gallery .gallery img {
+	border: none!important;
+}
+
+article.post-gallery .wp-caption-text {
+	font-size: 86%;
+}
+
+article.post-gallery h2 {
+	text-align: center;
+}
+
+article.post-gallery h2 a {
+	color: #FFF;
+	text-decoration: none;
+	font-size: 130%;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+
+
 /* Header */
 .site-header {
 	border-bottom: 2px solid #b62912;
