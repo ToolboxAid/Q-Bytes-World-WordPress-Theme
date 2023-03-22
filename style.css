@@ -5,6 +5,15 @@ Author URI: http://toolboxaid.com
 Version: 1.0
 */
 
+body
+{
+	background-color: #808000 !important;
+}
+.site-content
+{
+	background-color: pink !important;
+}
+
 html {
 	padding: 0;
 	margin: 0;
@@ -15,12 +24,13 @@ body {
 	margin: 0;
 	font-family: Arial, sans-serif;
 	font-size: 16px;
-	color: #000000;
+	color: #333333;
+	background-color: #FFfffF;	
 }
 
 a:link,
 a:visited {
-	color: #c30000;
+	color: #c3ff00;
 }
 
 p {
@@ -189,9 +199,95 @@ article.post-gallery h2 a {
 .site-header nav ul li.current_page_item,
 .site-header nav ul li.current_page_item a:visited {
 	font-weight: bold;
-	background-color: #b62912;
-	color: #FFF;
 }
+
+
+/* Post Columns */
+.home-columns {
+	padding-top: 20px;
+}
+
+.home-columns h2 {
+	margin-bottom: .7em;
+}
+
+.home-columns .one-half {
+	width: 45%;
+	float: left;
+	margin-right: 10%;
+}
+
+.home-columns .last {
+	margin-right: 0;
+}
+
+.home-columns .post-item {
+	border-bottom: 1px solid #DDD;
+	padding-bottom: 1px;
+	margin-bottom: 16px;
+}
+
+.home-columns .square-thumbnail {
+	float: left;
+	margin-right: 20px;
+}
+
+.home-columns .post-item:last-of-type {
+	border-bottom: none;
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+
+.home-columns h4 {
+	margin-bottom: 3px;
+	font-weight: bold;
+}
+
+.home-columns h4 a {
+	text-decoration: none;
+}
+
+.home-columns h4 a:hover {
+	text-decoration: underline;
+}
+
+.subtle-date {
+	margin-left: 5px;
+	font-weight: normal;
+	font-size: 80%;
+	color: #FFF;
+	background-color: #BABABA;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, .33);
+	border-radius: 5px;
+	padding: 3px 7px;
+}
+
+.home-columns p {
+	font-size: 83%;
+}
+
+.btn-a,
+.btn-a:link,
+.btn-a:visited {
+	margin-top: 12px;
+	display: inline-block;
+	background-color: #006ec3;
+	text-decoration: none;
+	color: #FFF;
+	padding: 15px;
+	border-radius: 4px;
+	text-shadow: 1px 1px 0px rgba(0, 0, 0, .6);
+}
+
+.btn-a:hover {
+	background-color: #004C87;
+}
+
+.horiz-center {
+	display: block;
+	text-align: center;
+}
+
 
 
 /* Main Column */
@@ -410,8 +506,6 @@ div.header-search label {
 	left: -9999px;
 }
 div.header-search #searchsubmit {
-	background-color: #b62912;
-	color: #FFF;
 	padding: 5px 14px;
 	border: 3px dotted #888888 !important; 
 	vertical-align: top;
