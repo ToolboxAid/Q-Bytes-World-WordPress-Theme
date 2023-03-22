@@ -41,7 +41,7 @@ function custom_excerpt_length()
 add_filter('excerpt_length', 'custom_excerpt_length');
 
 // Theme setup
-function qbytesworld_setup()
+function qbytesworld_Setup()
 {
 	// Navigation Menus
 	register_nav_menus(array(
@@ -58,5 +58,58 @@ function qbytesworld_setup()
 	// Add post type support
 	add_theme_support('post-formats', array('aside', 'gallery', 'link'));
 }
-add_action('after_setup_theme', 'qbytesworld_setup');
+add_action('after_setup_theme', 'qbytesworld_Setup');
+
+// Add Widget Areas
+function qbytesworld_WidgetsInit() {
+	
+	register_sidebar( array(
+		'name' => 'Sidebar',
+		'id' => 'sidebar1',
+		'before_widget' => '<div class="widget-item">',
+		'after_widget' => '</div>',
+		'before_title' => '<div class="widget-title">',
+		'after_title' => '</div>',
+	));
+	
+	register_sidebar( array(
+		'name' => 'Footer Area 1',
+		'id' => 'footer1',
+		'before_widget' => '<div class="widget-footer-item">',
+		'after_widget' => '</div>',
+		'before_title' => '<div class="widget-footer-title">',
+		'after_title' => '</div>',
+	));
+	
+	register_sidebar( array(
+		'name' => 'Footer Area 2',
+		'id' => 'footer2',
+		'before_widget' => '<div class="widget-footer-item">',
+		'after_widget' => '</div>',
+		'before_title' => '<div class="widget-footer-title">',
+		'after_title' => '</div>',
+	));
+	
+	register_sidebar( array(
+		'name' => 'Footer Area 3',
+		'id' => 'footer3',
+		'before_widget' => '<div class="widget-footer-item">',
+		'after_widget' => '</div>',
+		'before_title' => '<div class="widget-footer-title">',
+		'after_title' => '</div>',
+	));
+	
+	register_sidebar( array(
+		'name' => 'Footer Area 4',
+		'id' => 'footer4',
+		'before_widget' => '<div class="widget-footer-item">',
+		'after_widget' => '</div>',
+		'before_title' => '<div class="widget-footer-title">',
+		'after_title' => '</div>',
+	));
+	
+}
+add_action('widgets_init', 'qbytesworld_WidgetsInit');
+
+
 

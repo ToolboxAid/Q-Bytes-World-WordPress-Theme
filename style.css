@@ -35,7 +35,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* General Layout */
 div.container {
-	max-width: 960px;
+	max-width: 1024px;
 	margin: 0 auto;
 	padding-left: 30px;
 	padding-right: 30px;
@@ -193,8 +193,83 @@ article.post-gallery h2 a {
 	color: #FFF;
 }
 
+
+/* Main Column */
+.main-column {
+	width: 66%;
+	float: left;
+}
+
+/* Side Column */
+.side-column {
+	width: 30%;
+	float: right;
+}
+
+.side-column .widget-item {
+	border-bottom: 1px solid #DDD;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+}
+
+h2.widget-title {
+	font-weight: normal;
+	margin-bottom: 10px;
+	color: #888;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 138%;
+}
+
+.widget-item {
+	font-size: 125%;
+	background-color: #FFF5CB;
+	border-bottom: none;
+	border-radius: 10px;
+	box-shadow: 1px 1px 3px 3px rgba(255, 0, 0, .35);
+}
+div.widget-title {
+	color:rgba(255, 0, 0, .35);
+	background-color: rgb(255, 225, 230);
+	padding: 10px 10px 10px 10px;
+}
+
+ul.wp-block-archives-list li,
+.cat-item {
+	padding-left: 10px ;
+	text-decoration: none;
+	list-style-type: none; /* Remove bullets */
+}
+.widget-item ul {
+	margin: 0;
+	padding: 0;
+}
+
+.widget-item ul li {
+	list-style-position: inside;
+	line-height: 1.65em;
+}
+
+.widget-item p:last-child {
+	margin: 0;
+}
+
+/* Footer Widget Areas */
+.footer-widgets {
+	padding-top: 40px;
+	margin-right: -40px;
+}
+
+.footer-widget-area {
+	width: 25%;
+	float: left;
+	box-sizing: border-box;
+	padding-right: 40px;
+}
+
 /* Footer */
 .site-footer {
+	overflow: hidden;
 	margin-top: 30px;
 	border-top: 2px solid #b62912;
 	font-size: 84%;
