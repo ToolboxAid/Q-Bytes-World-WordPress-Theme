@@ -51,7 +51,6 @@ if (have_posts()) :
 			<a href="<?php the_permalink() ?>">Read more &raquo;</a>		
 		</p>
 
-
 	</article>
 	
 	<?php endwhile;
