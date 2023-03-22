@@ -1,4 +1,5 @@
-'index.php'
+
+<p>'front-page.php'</p>
 <?php
 
 get_header(); ?>
@@ -6,24 +7,23 @@ get_header(); ?>
 	<!-- site-content -->
 	<div class="site-content clearfix">
 		
-		<!-- main-column -->
-		<div class="main-column">
+			<h3>Custom HTML Here!</h3>
 
 			<?php if (have_posts()) :
 				while (have_posts()) : the_post();
 
-				get_template_part('template-content', get_post_format());
+				the_content();
 
 				endwhile;
 
 				else :
-					get_template_part('template-empty'); /* matches file name empty.php */	
+					echo '<p>No content found</p>';
+
 				endif;
 				?>
-
-		</div><!-- /main-column -->
-
-		<?php get_sidebar(); ?>
+	
+				<h3>Custom HTML Here!</h3>
+		
 		
 	</div><!-- /site-content -->
 	
