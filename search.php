@@ -4,6 +4,12 @@
 get_header();
 
 if (have_posts()) :
+?>
+
+<h2>Search results for: `<?php the_search_query(); ?>`</h2>
+
+<?php
+
     /* the loop */
 	while (have_posts()) : the_post(); ?>
 	
@@ -34,23 +40,10 @@ if (have_posts()) :
 		 ?>
 		</p>
 
-<!--
-		<?php if ($post->post_excerpt) { ?>			
-			<p>
-			<?php echo get_the_excerpt(); ?>
-			<a href="<?php the_permalink(); ?>">Read more&raquo;</a>
-			</p>
-			
-		<?php } else {			
-			the_content("Continue reading");			
-		} ?>
--->
-
 		<p>
-			<?php echo get_the_excerpt(); ?>
-			<a href="<?php the_permalink() ?>">Read more &raquo;</a>		
+		<?php echo get_the_excerpt(); ?>
+		<a href="<?php the_permalink() ?>">Read more &raquo;</a>		
 		</p>
-
 
 	</article>
 	

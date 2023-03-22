@@ -19,7 +19,7 @@ function qbytesworld_setup()
 {
 	// Navigation Menus
 	register_nav_menus(array(
-		'primary' => __( 'Primary Menu'),
+		'header' => __( 'Header Menu'),
 		'footer' => __( 'Footer Menu'),
 	));
 

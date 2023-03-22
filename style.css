@@ -195,3 +195,23 @@ img{
 	top:0;
 	left:0;
 }
+
+/* Search - Find it*/
+div.header-search {
+	float: right;
+}
+div.header-search label {
+	position: absolute;
+	left: -9999px;
+}
+div.header-search #searchsubmit {
+	background-color: #b62912;
+	color: #FFF;
+	padding: 5px 14px;
+	border: 3px dotted #999999 !important; 
+	vertical-align: top;
+}
+div.header-search #s {
+	vertical-align: top;
+	padding: 3px 0;
+}
