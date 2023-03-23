@@ -1,6 +1,4 @@
-<?php
-
-get_header(); ?>
+<?php get_header(); ?>
 	
 	<!-- site-content -->
 	<div class="site-content clearfix">
@@ -114,6 +112,5 @@ get_header(); ?>
 			
 	</div><!-- /site-content -->
 	
-	<?php get_footer();
-
-?>
+	<?php get_footer(); ?>
+<a href="javascript:void(0);" class="scroll-top" rel="nofollow" style="display: inline;"><i class="fa fa-arrow-up"></i></a>

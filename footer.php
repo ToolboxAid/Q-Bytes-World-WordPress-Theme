@@ -48,11 +48,10 @@
 				<table class="hrTable">
 					<tr>
 						<td><hr></td>
-						<td class="star">*</td>
+						<td class="star"><i class="fa fa-star" style="font-size:48px;"></i></td>
 						<td><hr></td>
 					</tr>
 				</table>
-
 				<div class="cc">
 					<p><?php bloginfo('name'); ?> - &copy; <?php echo date('Y');?></p>
 				</div>
