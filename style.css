@@ -5,6 +5,29 @@ Author URI: http://toolboxaid.com
 Version: 1.0
 */
 
+.image-container
+{
+	width: 200px;
+	height: 200px;
+	overflow: hidden;
+}
+.the_image
+{
+	width:100%;
+	height: 100%;
+	background-image: url("http://q-bytes-world-wordpress.local/wp-content/uploads/2023/03/piHole.png");
+
+	background-position: center;
+	background-size: cover;
+
+	transition: 0.5s ease-in-out;
+}
+.the_image:hover
+{
+	transform: rotate(10deg) scale(1.2);
+}
+
+
 .alignleft
 {
 	float: left;
@@ -91,7 +114,7 @@ div.menu
 
 div.image
 {
-	background-image: url("http://q-bytes-world-wordpress.local/wp-content/uploads/2023/03/cropped-head-back3.jpg");
+	background-image: url("http://q-bytes-world-wordpress.local/wp-content/uploads/2023/03/head-back.jpg");
 	background-color: #cccccc;	
 	height: 100px;
 }
