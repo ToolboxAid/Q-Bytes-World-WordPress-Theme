@@ -23,11 +23,11 @@
 			
 			<div class="image">
 				<div class="content-width">
+					<h1 class="title"><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
+
 					<div class="header-search">
 						<?php get_search_form(); ?>
-					</div>
-					
-					<h1 class="title"><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
+					</div>					
 				</div>
 			</div>
 			
