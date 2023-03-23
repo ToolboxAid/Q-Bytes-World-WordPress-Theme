@@ -114,13 +114,6 @@ add_action('widgets_init', 'qbytesworld_WidgetsInit');
 
 /*
 
-
-
-
-
-
-
-
 */
 
 
@@ -134,10 +127,20 @@ function qbytesworld_WordPress_customize_register( $wp_customize ) {
 	));
 
 	/* Create setting */
+	$wp_customize->add_setting('qbw_backgroud_color_start', array(
+		'default' => '#cccccc',
+		'transport' => 'refresh',
+	));
+	$wp_customize->add_setting('qbw_backgroud_color_end', array(
+		'default' => '#666666',
+		'transport' => 'refresh',
+	));
+
+
 	$wp_customize->add_setting('qbw_link_color', array(
 		'default' => '#006ec3',
 		'transport' => 'refresh',
-	));
+	));	
 
 	$wp_customize->add_setting('qbw_btn_color', array(
 		'default' => '#006ec3',
@@ -155,6 +158,18 @@ function qbytesworld_WordPress_customize_register( $wp_customize ) {
 	));
 
 	/* add setting to section */
+	
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'qbw_backgroud_color_start', array(
+		'label' => __('Background Color start', 'qbytesworld_WordPress'),
+		'section' => 'qbw_standard_colors',
+		'settings' => 'qbw_backgroud_color_start',
+	) ) );
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'qbw_backgroud_color_end', array(
+		'label' => __('Background Color end', 'qbytesworld_WordPress'),
+		'section' => 'qbw_standard_colors',
+		'settings' => 'qbw_backgroud_color_end',
+	) ) );
+
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'qbw_link_color_control', array(
 		'label' => __('Link Color', 'qbytesworld_WordPress'),
 		'section' => 'qbw_standard_colors',
@@ -186,6 +201,17 @@ add_action('customize_register', 'qbytesworld_WordPress_customize_register');
 function qbytesworld_WordPress_customize_css() { ?>
 
 	<style type="text/css">
+
+		body
+		{			
+			/* background-image: linear-gradient(180deg, red, yellow); */
+			
+			background-image: linear-gradient(180deg, 
+				<?php echo get_theme_mod('qbw_backgroud_color_start'); ?>,
+				<?php echo get_theme_mod('qbw_backgroud_color_end'); ?> );
+
+			background-color:<?php echo get_theme_mod('qbw_backgroud_color_start'); ?>;
+		}
 
 		a:link,
 		a:visited {

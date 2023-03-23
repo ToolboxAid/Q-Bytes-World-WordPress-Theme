@@ -1,5 +1,8 @@
-	<footer class="site-footer">
-		
+
+
+
+<footer class="site-footer">
+<div class="border"></div>		
 		<!-- footer-widgets -->
 		<div class="footer-widgets clearfix">
 			
@@ -39,8 +42,16 @@
 			<?php wp_nav_menu(  $args ); ?>
 		</nav>
 		
-		<p><?php bloginfo('name'); ?> - &copy; <?php echo date('Y');?></p>
-	
+		<table class="hrTable">
+			<tr>
+				<td><hr></td>
+				<td class="star">*</td>
+				<td><hr></td>
+			</tr>
+		</table>
+		<div class="cc">
+			<p><?php bloginfo('name'); ?> - &copy; <?php echo date('Y');?></p>
+		</div>
 	</footer>
 </div> <!-- class="qbw_body" -->
 </div><!-- container -->

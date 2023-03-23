@@ -4,11 +4,83 @@ Author: Mr. Q
 Author URI: http://toolboxaid.com
 Version: 1.0
 */
-
-body
+.site-footer
 {
-	background-color: #808000 !important;
+	background-color: #006ec3;
 }
+div.cc
+{
+	margin: auto;
+	text-align: center;
+}
+.hrTable{
+	width:100%
+}
+
+.hrTable hr{
+	width:80%;
+	border-top: 3px solid red;
+}
+.hrTable td.star{
+	width:2%;
+	padding-top:30px;
+	color:red;
+	font-size: 400%;}
+
+header.site-header
+{
+	margin: 0px;
+	border-width: 0px;
+	padding: 0px;
+}
+
+div.social, 
+div.quote,
+div.menu,
+div.image,
+div.border
+{
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+
+div.social
+{
+	background-color: rgb(146, 127, 146);	
+	height: 55px;	
+}
+div.tagline
+{
+	background-color:#cccccc;
+	height: 68px;	
+}
+div.menu
+{
+	background-color: yellow;
+	height: 40px;
+}
+
+div.image
+{
+	background-image: url("http://q-bytes-world-theme.local/wp-content/uploads/2023/03/cropped-cropped-head-back3-1.jpg;");
+	background-color: #cccccc;	
+	height: 100px;
+}
+div.border
+{
+	background-color: red;
+	height: 8px;	
+}
+
+
+/*                         */
+/*                         */
+/*                         */
+/*                         */
+/*                         */
+
+
 .site-content
 {
 	background-color: pink !important;
@@ -173,7 +245,7 @@ article.post-gallery h2 a {
 
 /* Header Nav Menu */
 .site-header nav {
-	margin-top: 30px;
+/*	margin-top: 30px; */
 }
 
 .site-header nav ul li {

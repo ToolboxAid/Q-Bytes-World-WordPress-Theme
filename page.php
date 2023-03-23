@@ -1,5 +1,5 @@
 
-<p>'page.php'</p>
+
 <?php
 /* Page is used for posts of type page */
 get_header();
@@ -35,3 +35,5 @@ if (have_posts()) :
 get_footer();
 
 ?>
+
+<p>'page.php'</p>
