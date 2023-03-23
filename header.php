@@ -16,12 +16,16 @@
 			<div class="social">
 				<div>
 					<div class="content-width">
-						<p>social icons here</p>
+						<a href="#"><i class="fa fa-youtube" ></i></a>
+						<a href="#"><i class="fa fa-twitter" ></i></a>
+						<a href="#"><i class="fa fa-twitch" ></i></a>
+						<a href="#"><i class="fa fa-facebook-official" ></i></a>
+						<a href="#"><i class="fa fa-whatsapp" ></i></a>
+						<a href="#"><i class="fa fa-instagram" ></i></a>
+						<a href="#"><i class="fa fa-whatsapp" ></i></a>
 					</div>
 				</div>
 			</div>
-
-			<div class="border"></div>
 			
 			<div class="image">
 				<div class="content-width">
@@ -33,8 +37,6 @@
 				</div>
 			</div>
 			
-			<div class="border"></div>
-
 			<div class="tagline">
 				<h3 class="content-width"><?php bloginfo('description'); ?>
 					<?php /* if (is_page(7)) {*/
