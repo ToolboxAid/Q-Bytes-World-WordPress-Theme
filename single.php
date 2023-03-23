@@ -35,9 +35,17 @@ if (have_posts()) :
 		
 	</article>
 	
-	<?php endwhile;
+	<?php endwhile; ?>
+
+<!-- Start the pagination functions after the loop. -->
+<div class="nav-next alignleft"><?php previous_post_link(  ); ?></div>
+<div class="nav-previous alignright"><?php next_post_link(  ); ?></div>
+<!-- End the pagination functions after the loop. -->
+
+
+<?php
 	else :
-		echo '<p>Sorry, no content found  :(</p>';	
+		get_template_part('template-empty'); /* matches file name empty.php */	
 	endif;
 	
 get_footer();

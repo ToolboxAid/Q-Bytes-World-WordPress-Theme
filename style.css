@@ -4,6 +4,15 @@ Author: Mr. Q
 Author URI: http://toolboxaid.com
 Version: 1.0
 */
+
+.alignleft
+{
+	float: left;
+}
+.alignright
+{
+	float: right;
+}
 .header-search
 {
 	padding-top: 40px;
