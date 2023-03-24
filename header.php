@@ -5,8 +5,8 @@
 		<title><?php bloginfo('name'); ?></title>
 		<meta charset="<?php bloginfo('charset'); ?>">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<!--< link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
-		<link rel="stylesheet" href="/wp-content/uploads/font-awesome-4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<!--<link rel="stylesheet" href="/wp-content/uploads/font-awesome-4.7.0/css/font-awesome.min.css"> -->
 	</head>
 
 	<body <?php body_class(); ?>>
@@ -30,7 +30,6 @@
 			<div class="image">
 				<div class="content-width">
 					<h1 class="title"><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
-
 					<div class="header-search">
 						<?php get_search_form(); ?>
 					</div>					
