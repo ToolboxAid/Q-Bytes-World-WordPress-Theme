@@ -173,16 +173,41 @@ span:hover {
   animation-name: bounce;
   -moz-animation-name: bounce;
 }
+
+/* hide till scroll */
+#btnScrollToTop {
+    opacity: 0;
+    transition: all 1.25s ease-in-out;
+}
+#btnScrollToTop.show {
+	opacity: 1;
+}
+
 		</style>
 
-		<button id="btnScrollToTop">
+		<button id="btnScrollToTop" class="">
 			<div class="blobs-container">
-			<span class="bounce_button">
-				<div class="blob red"><i class="fa fa-arrow-up fa-3x" aria-hidden="true"></i></div>
+				<span class="bounce_button">
+					<div class="blob red"><i class="fa fa-arrow-up fa-3x" aria-hidden="true"></i></div>
 				</span>		
 			</div>
 		</button>
+
 		<script>
+
+//You can replace offset value from here
+var offset = 300
+$(window).on('load scroll', function(){
+
+var element = document.getElementById("btnScrollToTop");
+
+    if( $(window).scrollTop() > offset ){
+		element.classList.add("show");
+    }else{
+        element.classList.remove("show");
+    }
+})
+
 
 			const btnScrollToTop = document.querySelector("#btnScrollToTop");
 
@@ -200,5 +225,9 @@ span:hover {
 				// option 3 - works for all
 				$("html, body").animate({ scrollTop: 0 }, "slow");
 			});
+/**/
+
+
+
 
 		</script>
