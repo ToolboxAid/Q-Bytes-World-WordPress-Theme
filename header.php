@@ -7,6 +7,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<!--< link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 		<link rel="stylesheet" href="/wp-content/uploads/font-awesome-4.7.0/css/font-awesome.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>		
 	</head>
 
 	<body <?php body_class(); ?>>
@@ -57,3 +58,111 @@
 		</header><!-- /site-header -->
 
 		<div class="qbw_body content-width"><!-- /content -->
+
+		<style>
+			#btnScrollToTop{
+				position: fixed;
+				right: 3%;
+				bottom: 3%;
+				width: 50px;
+				height: 50px;
+				border-radius: 50%;
+				background: orange;
+				border:none;
+				color:white;
+				outline:none;
+				cursor:pointer;
+			}
+			#btnScrollToTop:hover{
+				color:purple;
+				background:orange;
+			}
+			#btnScrollToTop:active{
+				color:black;
+				background:yellow;
+			}
+
+
+/* Pulse effect */
+.fa-arrow-up{
+	margin-top:3px;
+}
+		.blobs-container {
+		display: flex;
+		}
+
+		.blob {
+			background: black;
+			border-radius: 80%;
+			margin: 00px;
+			height: 50px;
+			width: 50px;
+		}
+
+		@keyframes pulse {
+			0% {
+				transform: scale(0.95);
+				box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+			}
+
+			70% {
+				transform: scale(1);
+				box-shadow: 0 0 0 30px rgba(0, 0, 0, 0);
+			}
+
+			100% {
+				transform: scale(0.95);
+				box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+			}
+		}
+
+		.blob.red {
+		background: rgba(255, 125, 0, 1);
+		box-shadow: 0 0 0 0 rgba(255, 82, 82, 1);
+		animation: pulse-red 2s infinite;
+		}
+
+		@keyframes pulse-red {
+		0% {
+			transform: scale(1.1);
+			box-shadow: 0 0 0 0 rgba(255, 82, 82, 0.7);
+		}
+		
+		70% {
+			transform: scale(1);
+			box-shadow: 0 0 0 40px rgba(255, 82, 82, 0);
+		}
+		
+		100% {
+			transform: scale(1.1);
+			box-shadow: 0 0 0 0 rgba(255, 82, 82, 0);
+		}
+		}
+		</style>
+		
+		<button id="btnScrollToTop">
+			<div class="blobs-container">
+				<div class="blob red"><i class="fa fa-arrow-up fa-3x" aria-hidden="true"></i></div>
+			</div>
+		</button>
+		<script>
+
+			const btnScrollToTop = document.querySelector("#btnScrollToTop");
+
+			btnScrollToTop.addEventListener("click", function() {
+				// option 1 - jump to top
+				//window.scrollTo(0,0);
+
+				// option 2 - limited Chrome & Fire Fox
+				//window.scrollTo({
+				//	top:0,
+				//	left:0,
+				//	behavior:"smooth"
+				//	});
+
+				// option 3 - works for all
+				$("html, body").animate({ scrollTop: 0 }, "slow");
+
+			});
+
+		</script>

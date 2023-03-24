@@ -60,5 +60,8 @@
 		</div> <!-- class="qbw_body" -->
 		</div><!-- container -->
 		<?php wp_footer(); ?>
+
+
+
 	</body>
 </html>
