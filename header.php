@@ -66,7 +66,7 @@
 				width: 50px;
 				height: 50px;
 				border-radius: 50%;
-				background: orange;
+				background: rgb(0,0,0,0);
 				border:none;
 				color:white;
 				outline:none;
@@ -74,7 +74,7 @@
 			}
 			#btnScrollToTop:hover{
 				color:purple;
-				background:orange;
+				background: rgb(0,0,0,0);
 			}
 			#btnScrollToTop:active{
 				color:black;
@@ -137,11 +137,49 @@
 			box-shadow: 0 0 0 0 rgba(255, 82, 82, 0);
 		}
 		}
+
+/* bounce effect */
+@keyframes bounce {
+	0%, 100%, 20%, 50%, 80% {
+		-webkit-transform: translateY(0);
+		-ms-transform:     translateY(0);
+		transform:         translateY(0)
+	}
+	40% {
+		-webkit-transform: translateY(-30px);
+		-ms-transform:     translateY(-30px);
+		transform:         translateY(-30px)
+	}
+	60% {
+		-webkit-transform: translateY(-15px);
+		-ms-transform:     translateY(-15px);
+		transform:         translateY(-15px)
+	}
+}
+
+span {  
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+}
+
+span:hover {
+  cursor: pointer;
+  animation-name: bounce;
+  -moz-animation-name: bounce;
+}
 		</style>
 
 		<button id="btnScrollToTop">
 			<div class="blobs-container">
+			<span class="bounce_button">
 				<div class="blob red"><i class="fa fa-arrow-up fa-3x" aria-hidden="true"></i></div>
+				</span>		
 			</div>
 		</button>
 		<script>
@@ -161,7 +199,6 @@
 
 				// option 3 - works for all
 				$("html, body").animate({ scrollTop: 0 }, "slow");
-
 			});
 
 		</script>
