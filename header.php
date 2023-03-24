@@ -70,7 +70,6 @@
 				border:none;
 				color:white;
 				outline:none;
-				cursor:pointer;
 			}
 			#btnScrollToTop:hover{
 				color:purple;
@@ -146,14 +145,14 @@
 		transform:         translateY(0)
 	}
 	40% {
-		-webkit-transform: translateY(-30px);
-		-ms-transform:     translateY(-30px);
-		transform:         translateY(-30px)
+		-webkit-transform: translateY(-10px);
+		-ms-transform:     translateY(-10px);
+		transform:         translateY(-10px)
 	}
 	60% {
-		-webkit-transform: translateY(-15px);
-		-ms-transform:     translateY(-15px);
-		transform:         translateY(-15px)
+		-webkit-transform: translateY(-10px);
+		-ms-transform:     translateY(-10px);
+		transform:         translateY(-10px)
 	}
 }
 
@@ -169,7 +168,6 @@ span {
 }
 
 span:hover {
-  cursor: pointer;
   animation-name: bounce;
   -moz-animation-name: bounce;
 }
@@ -177,10 +175,12 @@ span:hover {
 /* hide till scroll */
 #btnScrollToTop {
     opacity: 0;
+	cursor: default;
     transition: all 1.25s ease-in-out;
 }
 #btnScrollToTop.show {
 	opacity: 1;
+	cursor:pointer;
 }
 
 		</style>
