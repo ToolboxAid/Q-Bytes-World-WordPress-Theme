@@ -31,7 +31,6 @@
 			<div class="image">
 				<div class="content-width">
 					<h1 class="title"><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
-
 					<div class="header-search">
 						<?php get_search_form(); ?>
 					</div>					
@@ -139,7 +138,7 @@
 		}
 		}
 		</style>
-		
+
 		<button id="btnScrollToTop">
 			<div class="blobs-container">
 				<div class="blob red"><i class="fa fa-arrow-up fa-3x" aria-hidden="true"></i></div>
