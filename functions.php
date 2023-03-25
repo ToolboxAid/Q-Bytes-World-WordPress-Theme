@@ -63,7 +63,7 @@ add_action('after_setup_theme', 'qbytesworld_Setup');
 
 // Add Widget Areas
 function qbytesworld_WidgetsInit() {
-	
+
 	register_sidebar( array(
 		'name' => 'Sidebar',
 		'id' => 'sidebar1',
@@ -72,17 +72,31 @@ function qbytesworld_WidgetsInit() {
 		'before_title' => '<div class="widget-title">',
 		'after_title' => '</div>',
 	));
+
+	/*
+    register_sidebar( array(
+        'name'          => __( 'Main Sidebar', 'mytheme' ),
+        'id'            => 'main-sidebar',
+        'description'   => __( 'Widgets in this area will be shown on all posts and pages.', 'mytheme' ),
+
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h2 class="widget-title">',
+        'after_title'   => '</h2>',
+    ) );	
+	*/
 	
-	register_sidebar( array(
+	register_sidebar( array(/*footer 1*/
 		'name' => 'Footer Area 1',
 		'id' => 'footer1',
+		
 		'before_widget' => '<div class="widget-footer-item">',
 		'after_widget' => '</div>',
 		'before_title' => '<div class="widget-footer-title">',
 		'after_title' => '</div>',
 	));
 	
-	register_sidebar( array(
+	register_sidebar( array(/*footer 2*/
 		'name' => 'Footer Area 2',
 		'id' => 'footer2',
 		'before_widget' => '<div class="widget-footer-item">',
@@ -91,7 +105,7 @@ function qbytesworld_WidgetsInit() {
 		'after_title' => '</div>',
 	));
 	
-	register_sidebar( array(
+	register_sidebar( array(/*footer 3*/
 		'name' => 'Footer Area 3',
 		'id' => 'footer3',
 		'before_widget' => '<div class="widget-footer-item">',
@@ -100,7 +114,7 @@ function qbytesworld_WidgetsInit() {
 		'after_title' => '</div>',
 	));
 	
-	register_sidebar( array(
+	register_sidebar( array(/*footer 4*/
 		'name' => 'Footer Area 4',
 		'id' => 'footer4',
 		'before_widget' => '<div class="widget-footer-item">',
@@ -114,16 +128,16 @@ add_action('widgets_init', 'qbytesworld_WidgetsInit');
 
 /*
 
+
 */
 
-
-// Customize Appearance Options
-function qbytesworld_WordPress_customize_register( $wp_customize ) {
+// Customize Appearance Options header
+function header_options_body( $wp_customize ) {
 
 	/* Create section */
-	$wp_customize->add_section('qbw_standard_colors', array(
-		'title' => __('Site Standard Colors', 'qbytesworld_WordPress'),
-		'priority' => 30,
+	$wp_customize->add_section('options_header', array(
+		'title' => __('Options - Header', 'qbytesworld_WordPress'),
+		'priority' => 160,
 	));
 
 	/* Create setting */
@@ -161,44 +175,44 @@ function qbytesworld_WordPress_customize_register( $wp_customize ) {
 	
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'qbw_backgroud_color_start', array(
 		'label' => __('Background Color start', 'qbytesworld_WordPress'),
-		'section' => 'qbw_standard_colors',
+		'section' => 'options_header',
 		'settings' => 'qbw_backgroud_color_start',
 	) ) );
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'qbw_backgroud_color_end', array(
 		'label' => __('Background Color end', 'qbytesworld_WordPress'),
-		'section' => 'qbw_standard_colors',
+		'section' => 'options_header',
 		'settings' => 'qbw_backgroud_color_end',
 	) ) );
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'qbw_link_color_control', array(
 		'label' => __('Link Color', 'qbytesworld_WordPress'),
-		'section' => 'qbw_standard_colors',
+		'section' => 'options_header',
 		'settings' => 'qbw_link_color',
 	) ) );
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'qbw_btn_color_control', array(
 		'label' => __('Button Color', 'qbytesworld_WordPress'),
-		'section' => 'qbw_standard_colors',
+		'section' => 'options_header',
 		'settings' => 'qbw_btn_color',
 	) ) );
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'qbw_btn_text_color_control', array(
 		'label' => __('Button Text Color', 'qbytesworld_WordPress'),
-		'section' => 'qbw_standard_colors',
+		'section' => 'options_header',
 		'settings' => 'qbw_btn_text_color',
 	) ) );
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'qbw_btn_hover_color_control', array(
 		'label' => __('Button Hover Color', 'qbytesworld_WordPress'),
-		'section' => 'qbw_standard_colors',
+		'section' => 'options_header',
 		'settings' => 'qbw_btn_hover_color',
 	) ) );
 
 }
-add_action('customize_register', 'qbytesworld_WordPress_customize_register');
+add_action('customize_register', 'header_options_body');
 
 // Output Customize CSS
-function qbytesworld_WordPress_customize_css() { ?>
+function header_options_css() { ?>
 
 	<style type="text/css">
 
@@ -243,5 +257,122 @@ function qbytesworld_WordPress_customize_css() { ?>
 	</style>
 
 <?php }
-add_action('wp_head', 'qbytesworld_WordPress_customize_css');
+add_action('wp_head', 'header_options_css');
 
+// Customize Appearance Options body
+function body_options( $body_customize ) {
+	$body_customize->add_section( 'body_options', array(
+	  'title' => __( 'Options - Body', 'mytheme' ),
+	  'description' => __( 'Configure your My Theme settings', 'mytheme' ),
+	  'priority' => 161,
+	) );
+  
+	// Add a checkbox control
+	$body_customize->add_setting( 'show_featured_image', array(
+	  'default' => true,
+	  'sanitize_callback' => 'sanitize_boolean',
+	) );
+  
+	$body_customize->add_control( 'show_featured_image', array(
+	  'type' => 'checkbox',
+	  'label' => __( 'Show featured image on posts', 'mytheme' ),
+	  'section' => 'body_options',
+	) );
+  
+	// Add a radio button control
+	$body_customize->add_setting( 'header_layout', array(
+	  'default' => 'default',
+	  'sanitize_callback' => 'sanitize_text_field',
+	) );
+  
+	$body_customize->add_control( 'header_layout', array(
+	  'type' => 'radio',
+	  'label' => __( 'Header layout', 'mytheme' ),
+	  'section' => 'body_options',
+	  'choices' => array(
+		'default' => __( 'Default', 'mytheme' ),
+		'centered' => __( 'Centered', 'mytheme' ),
+		'left' => __( 'Left', 'mytheme' ),
+		'right' => __( 'Right', 'mytheme' ),
+	  ),
+	) );
+  
+	// Add a select dropdown control
+	$body_customize->add_setting( 'footer_color', array(
+	  'default' => 'light',
+	  'sanitize_callback' => 'sanitize_text_field',
+	) );
+  
+	$body_customize->add_control( 'footer_color', array(
+	  'type' => 'select',
+	  'label' => __( 'Footer color', 'mytheme' ),
+	  'section' => 'body_options',
+	  'choices' => array(
+		'light' => __( 'Light', 'mytheme' ),
+		'dark' => __( 'Dark', 'mytheme' ),
+	  ),
+	) );
+  
+	// Add a text input control
+	$body_customize->add_setting( 'custom_text', array(
+	  'default' => '',
+	  'sanitize_callback' => 'sanitize_text_field',
+	) );
+  
+	$body_customize->add_control( 'custom_text', array(
+	  'type' => 'text',
+	  'label' => __( 'Custom text', 'mytheme' ),
+	  'section' => 'body_options',
+	) );
+  }  
+  add_action( 'customize_register', 'body_options' );
+  
+
+
+
+  // Sanitize boolean values
+  function sanitize_boolean( $value ) {
+	return (bool) $value;
+  }
+
+
+
+
+
+  // Add a custom section to the Customizer
+function mytheme_customize_register( $wp_customize ) {
+   // Add a new section called "Footer Options"
+   $wp_customize->add_section( 'footer_options', array(
+      'title' => __( 'Options - Footer', 'mytheme' ),
+      'description' => __( 'Customize the footer options of your site', 'mytheme' ),
+      'priority' => 162,
+   ) );
+
+   // Add a checkbox control for "Show Footer"
+   $wp_customize->add_setting( 'show_footer', array(
+      'default' => true,
+      'transport' => 'refresh',
+   ) );
+   $wp_customize->add_control( 'show_footer', array(
+      'label' => __( 'Show Footer', 'mytheme' ),
+      'description' => __( 'Check this box to show the footer', 'mytheme' ),
+      'section' => 'footer_options',
+      'type' => 'checkbox',
+   ) );
+
+   // Add a text input control for "Footer Text"
+   $wp_customize->add_setting( 'footer_text', array(
+      'default' => '',
+      'transport' => 'refresh',
+   ) );
+   $wp_customize->add_control( 'footer_text', array(
+      'label' => __( 'Footer Text', 'mytheme' ),
+      'description' => __( 'Enter the text to display in the footer', 'mytheme' ),
+      'section' => 'footer_options',
+      'type' => 'text',
+   ) );
+}
+add_action( 'customize_register', 'mytheme_customize_register' );
+
+
+  

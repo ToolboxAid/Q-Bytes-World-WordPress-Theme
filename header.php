@@ -270,7 +270,16 @@ var element = document.getElementById("btnScrollToTop");
 			});
 /**/
 
-
-
-
 		</script>
+<?php
+// Get the value of the "Show Footer" checkbox
+$show_footer = get_theme_mod( 'show_footer', true );
+echo "show: '";
+echo $show_footer;
+echo "'<br/>";
+// Get the value of the "Footer Text" input
+$footer_text = get_theme_mod( 'footer_text', '' );
+echo " text: '";
+echo $footer_text;
+echo "'<br/><br/>";
+?>

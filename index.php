@@ -33,7 +33,7 @@ get_header(); ?>
 		<?php get_sidebar(); ?>
 		
 	</div><!-- /site-content -->
-	
+<br/>	
 	<?php get_footer();
 
 ?>
