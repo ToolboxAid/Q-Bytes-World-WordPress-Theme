@@ -30,10 +30,9 @@ if (have_posts()) :
 	<?php endwhile;	
 	else :
 		echo '<p>Sorry, we are too lazy to load any Pages! ;)</p>';		
-	endif;
-	
-get_footer();
-
+	endif; 
 ?>
-
 <p>'page.php'</p>
+<?php
+get_footer();
+?>

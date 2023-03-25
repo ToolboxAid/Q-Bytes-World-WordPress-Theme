@@ -11,6 +11,9 @@ Version: 1.0
 	padding: 0;
 }
 
+.content-width {
+	padding-top: 6px;
+}
 /** scroll top of page */
 html {
 	scroll-behavior:smooth;
@@ -67,10 +70,7 @@ html {
 	text-align: center;	
 }
 
-.site-footer
-{
-	background-color: #ffff00;
-}
+
 div.cc
 {
 	margin: auto;
@@ -97,7 +97,6 @@ header.site-header
 	margin-bottom: 30px;
 	border-width: 0px;
 	padding: 0px;
-	padding-top: 15px;
 }
 
 div.social, 
@@ -128,7 +127,6 @@ div.tagline
 }
 div.menu
 {
-	background-color: yellow;
 	height: 40px;
 }
 
@@ -139,8 +137,8 @@ div.image
 	background: url("/wp-content/uploads/2023/03/head-back.jpg") no-repeat;
 	background-size: cover;
 	background-color: #ff0000;	
-	border-top:    2px solid  #ff0;
-	border-bottom: 2px dotted #fF0;
+	border-top:    5px solid  #ff0;
+	border-bottom: 5px dotted #fF0;
 	border-style: solid;
 }
 
@@ -273,7 +271,6 @@ article.post-gallery h2 a {
 
 /* Header */
 .site-header {
-	border-bottom: 2px solid #b62912;
 	margin-bottom: 20px;
 	padding: 30px 0 0 0;
 }
@@ -305,7 +302,7 @@ ul#menu-header-links.menu
 .menu-header-links-container
 {
 	margin: auto;
-	width: 70%;
+	width: 90%;
 }
 .site-nav ul:before, .site-nav ul:after { content: ""; display: table; }
 .site-nav ul:after { clear: both; }
@@ -319,6 +316,7 @@ ul#menu-header-links.menu
 .site-nav ul li a:link,
 .site-nav ul li a:visited {
 	display: block;
+	
 }
 
 /* Header Nav Menu */
@@ -332,14 +330,15 @@ ul#menu-header-links.menu
 
 .site-header nav ul li a:link,
 .site-header nav ul li a:visited {
-	padding: 10px 17px;
+	padding: 0px 17px;
 	text-decoration: none;
-	border: 1px solid #DDD;
 	border-bottom: none;
+	color:#6300af;
 }
 
 .site-header nav ul li a:hover {
-	background-color: #ECECEC;
+	background-color: pink;
+	color:#6300af;
 }
 
 .site-header nav ul li.current-menu-item a:link,
@@ -349,6 +348,8 @@ ul#menu-header-links.menu
 .site-header nav ul li.current_page_item,
 .site-header nav ul li.current_page_item a:visited {
 	font-weight: bold;
+	background-color: blue !important;
+	color:white !important;
 }
 
 
@@ -421,7 +422,6 @@ ul#menu-header-links.menu
 .btn-a:visited {
 	margin-top: 12px;
 	display: inline-block;
-	background-color: #006ec3;
 	text-decoration: none;
 	color: #FFF;
 	padding: 15px;
@@ -546,8 +546,10 @@ div.widget-footer-item
 .site-footer {
 	overflow: hidden;
 	margin-top: 30px;
-	border-top: 2px solid #b62912;
 	font-size: 84%;
+
+	border-top: 4px solid #ffff00;
+	background-color: #ffff0044;	
 }
 /* Footer Nav Menu */
 .site-footer nav {

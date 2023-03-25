@@ -46,19 +46,62 @@
 				</h3>
 			</div>
 
+<!---
 			<div class="menu">				
 				<div class="content-width">
 					<nav class="site-nav">				
-					<?php $args = array( 'theme_location' => 'header' ); ?>
-					<?php wp_nav_menu(  $args ); ?>
+					< ?php $args = array( 'theme_location' => 'header' ); ?>
+					< ?php wp_nav_menu(  $args ); ?>
 					</nav>
 				</div>
 			</div>
+-->					
+			
+<div class="menu2">  
+  		<nav class="site-navy">				
+			<?php $args = array( 'theme_location' => 'header' ); ?>
+			<?php wp_nav_menu(  $args ); ?>
+		</nav>  
+</div>
+
 		</header><!-- /site-header -->
 
 		<div class="qbw_body content-width"><!-- /content -->
 
 		<style>
+
+.menu2 {
+  margin: 0 auto;
+  text-align: center;
+  background-color: yellow;
+}
+
+.menu2 ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+}
+
+.menu2 li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.menu2 a {
+  display: inline-block;
+  text-decoration: none;
+  color: #ffff000 !important;
+  padding: 10px 15px;
+}
+
+li.current_menu_item {
+  background-color: green !important;
+  color:red !important;
+}
+
+
+
 			#btnScrollToTop{
 				position: fixed;
 				right: 3%;

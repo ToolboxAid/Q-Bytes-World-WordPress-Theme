@@ -3,6 +3,63 @@
 	<!-- site-content -->
 	<div class="site-content clearfix">
 
+
+
+
+
+
+
+
+
+
+<style>
+	#animated-div {
+		position: absolute;
+		bottom: 0;
+		left: 75%;
+		transform: translateX(-50%);
+		width: 100px;
+		height: 75px;
+		background-color: purple;
+		opacity: 0;
+		transition: all 1s ease;
+	}
+</style>
+
+<script>
+	window.addEventListener('scroll', function() {
+		const animatedDiv = document.querySelector('#animated-div');
+		const scrollLocation = window.scrollY;
+		const windowHeight = window.innerHeight;
+		const documentHeight = document.body.clientHeight;
+		const animatedDivLocation = documentHeight - animatedDiv.offsetHeight;
+
+		if (scrollLocation + windowHeight >= animatedDivLocation) {
+			const distance = windowHeight + scrollLocation - animatedDivLocation + 100;
+			animatedDiv.style.opacity = '1';
+			animatedDiv.style.transform = `translateY(-${distance}px) translateX(-50%)`;
+		}
+	});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
 		<?php if (have_posts()) :
 			while (have_posts()) : the_post();
 
@@ -113,4 +170,3 @@
 	</div><!-- /site-content -->
 	
 	<?php get_footer(); ?>
-<a href="javascript:void(0);" class="scroll-top" rel="nofollow" style="display: inline;"><i class="fa fa-arrow-up"></i></a>

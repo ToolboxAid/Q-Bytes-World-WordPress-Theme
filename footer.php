@@ -2,7 +2,6 @@
 		</div><!-- /content -->
 
 		<footer class="site-footer">
-			<div class="border"></div>
 					
 				<!-- footer-widgets -->
 				<div class="footer-widgets clearfix">
