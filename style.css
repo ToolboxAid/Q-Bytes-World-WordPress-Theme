@@ -495,48 +495,6 @@ ul.wp-block-archives-list li,
 	margin: 0;
 }
 
-/* Footer Widget Areas 
-div.cat-item,
-div.footer-widget-area ul,
-div.footer-widget-area li,
-div.footer-widget-area a,
-div.widget-footer-item 
- {
-	list-style: none;
-	list-style-type: none;
-	list-style-position: inside;
-	margin: 0; 
-	padding: 0;
-  }
-
-  *//*
-.footer-widgets {
-	padding: 40px;
-	margin: 40px;
-}
-
-
-
-.footer-widget-area {
-	width: 25%;
-	float: left;
-	box-sizing: border-box;
-	padding-right: 0px;
-}
-
-.cat-item,
-.widget-footer-title,
-.wp-block-categories-list,
-.widget-footer-item,
-.widget-footer-item ul,
-.widget-footer-item ul li
-{	list-style-position: inside;
-	list-style: none;
-	list-style-type: none;
-	float: left;
-}
-*/
-
 /* Footer */
 .site-footer {
 	overflow: hidden;
